@@ -17,7 +17,6 @@ body, html {
   overflow: hidden;
 }
 
-/* 📸 Размытие фонового изображения */
 body::before {
   content: "";
   background-image: url('background.jpg');
@@ -33,14 +32,26 @@ body::before {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
+}
+
+.header-box {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  margin-bottom: 2rem;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-  font-size: 2.2rem;
-  line-height: 1.3;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  line-height: 1.4;
   word-break: break-word;
+  text-shadow:
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black;
 }
 
 .buttons {
@@ -52,12 +63,12 @@ h1 {
 .btn {
   display: inline-block;
   padding: 1rem;
-  background-color: rgba(0, 50, 0, 0.4); /* темнее и прозрачнее */
+  background-color: rgba(0, 50, 0, 0.4);
   color: white;
   text-decoration: none;
   font-weight: bold;
   border-radius: 0px;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
   border: 2px solid rgba(0, 70, 0, 0.5);
 }
 
