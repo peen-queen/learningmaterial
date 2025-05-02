@@ -1,3 +1,4 @@
+/* Фон страницы */
 body {
   margin: 0;
   padding: 0;
@@ -24,96 +25,96 @@ body {
 .header-box {
   background-color: white;
   padding: 20px 30px;
-  margin: 40px auto 30px auto;
+  margin: 20px auto 30px auto;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  display: inline-block;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  top: 0;
 }
 
 .title {
   font-size: 40px;
   color: black;
-  line-height: 1.3;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
 }
 
-/* Карточка и кнопки */
+/* Карточка */
 .card {
-  background-color: white;
-  padding: 40px 30px;
-  margin: 0 auto;
-  max-width: 500px;
-  border-radius: 10px;
+  padding: 30px;
   text-align: center;
+  color: #fff;
 }
 
+/* Кнопки */
 .buttons {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .btn {
-  background-color: #cce4ff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #add8e6;
   color: black;
   border: 1px solid gray;
   border-radius: 10px;
-  padding: 15px 20px;
+  padding: 15px 25px;
   font-size: 16px;
   cursor: pointer;
-  text-decoration: none;
   transition: box-shadow 0.3s ease;
-  display: inline-block;
-  text-align: center;
-}
-
-.btn-content {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
+  text-decoration: none;
+  min-width: 260px;
 }
 
 .btn:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Подсказка справа */
-.tooltip-container {
+/* Подсказка */
+.dropdown {
   position: relative;
   display: inline-block;
 }
 
-.tooltip-text {
-  visibility: hidden;
-  width: 280px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  text-align: left;
-  padding: 10px;
-  border-radius: 8px;
+.tooltip {
   position: absolute;
   left: 105%;
   top: 50%;
-  transform: translateY(-50%) translateX(10px);
-  z-index: 1;
-  font-size: 13px;
-  white-space: normal;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  white-space: nowrap;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  width: max-content;
+  max-width: 300px;
+  z-index: 10;
 }
 
-.tooltip-container:hover .tooltip-text {
-  visibility: visible;
+.dropdown:hover .tooltip {
   opacity: 1;
-  transform: translateY(-50%) translateX(0);
+  transform: translateY(-50%) translateX(10px);
+  pointer-events: auto;
 }
 
 /* Подвал */
 footer {
   text-align: center;
   color: white;
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
+  margin-top: 60px;
 }
