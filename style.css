@@ -52,17 +52,17 @@ h1 {
 .btn {
   display: inline-block;
   padding: 1rem;
-  background-color: rgba(0, 100, 0, 0.6); /* тёмно-зелёный с прозрачностью */
+  background-color: rgba(0, 50, 0, 0.4); /* темнее и прозрачнее */
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 0px; /* квадратные углы */
+  border-radius: 0px;
   transition: background 0.3s;
-  border: 2px solid rgba(0, 100, 0, 0.8); /* необязательно, но добавляет четкость */
+  border: 2px solid rgba(0, 70, 0, 0.5);
 }
 
 .btn:hover {
-  background-color: rgba(0, 100, 0, 0.8);
-  box-shadow: 0 0 12px rgba(0, 100, 0, 0.8); /* мягкая тень вокруг кнопки */
+  background-color: rgba(0, 70, 0, 0.6);
+  box-shadow: 0 0 12px rgba(0, 70, 0, 0.6);
   cursor: pointer;
 }
