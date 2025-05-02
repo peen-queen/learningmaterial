@@ -63,4 +63,6 @@ h1 {
 
 .btn:hover {
   background-color: rgba(0, 100, 0, 0.8);
+  box-shadow: 0 0 12px rgba(0, 100, 0, 0.8); /* мягкая тень вокруг кнопки */
+  cursor: pointer;
 }
