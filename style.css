@@ -1,68 +1,73 @@
+/* Фон страницы */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Anton', sans-serif;
-  background: url('background.jpg') no-repeat center center fixed;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: url("your-blurred-background.jpg") no-repeat center center fixed;
   background-size: cover;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+}
+
+.blur-background::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+/* Карточка */
+.card {
+  padding: 40px;
+  text-align: center;
   color: #fff;
 }
 
-.card {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  margin: 50px auto;
-  max-width: 700px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.title {
-  font-family: 'Times New Roman', serif;
+/* Заголовок */
+.header .title {
   font-size: 20px;
   color: white;
-  line-height: 1.5;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 1px black;
 }
 
+/* Кнопки */
 .buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  align-items: stretch;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .btn {
-  background-color: rgba(0, 100, 0, 0.6);
-  border: 1px solid #ccc;
-  padding: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 50, 0, 0.4);
   color: white;
-  text-decoration: none;
-  text-align: left;
-  font-size: 16px;
+  border: 1px solid gray;
   border-radius: 10px;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
   transition: box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100px;
+  text-decoration: none;
 }
 
 .btn:hover {
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
-.icon {
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
+/* Всплывающее описание */
 .dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 
@@ -71,22 +76,26 @@ body {
   max-height: 0;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 10px;
   color: white;
+  padding: 0 15px;
+  border-radius: 10px;
   font-size: 14px;
   white-space: nowrap;
-  transition: all 0.5s ease;
+  margin-top: 10px;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
 }
 
 .dropdown:hover .dropdown-content {
   opacity: 1;
-  max-height: 500px;
+  max-height: 300px;
+  padding: 15px;
+  pointer-events: auto;
 }
 
+/* Подвал */
 footer {
   text-align: center;
+  color: white;
   margin-top: 40px;
-  color: #ccc;
 }
