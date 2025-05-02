@@ -28,7 +28,9 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  filter: blur(12px) brightness(0.6);
+  filter: blur(12px) brightness(0.3); /* затемнили фон */
+  background-color: black;
+  mix-blend-mode: multiply; /* усиление затемнения по краям */
 }
 
 .container {
