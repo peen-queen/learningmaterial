@@ -3,13 +3,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Anton', sans-serif;
-  position: relative;
   min-height: 100vh;
   overflow-x: hidden;
   background: url("background.jpg") no-repeat center center fixed;
   background-size: cover;
+  position: relative;
 }
 
+/* Размытие фона */
 .blur-background::before {
   content: '';
   position: fixed;
@@ -24,44 +25,45 @@ body {
 /* Заголовок */
 .header-box {
   background-color: white;
-  padding: 20px 40px;
+  padding: 30px 20px;
   margin: 30px auto 20px;
+  max-width: 600px;
   text-align: center;
-  max-width: 700px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-.header-box .title {
+.title {
   font-size: 40px;
   color: black;
-  text-shadow: 1px 1px 1px gray;
+  line-height: 1.3;
 }
 
-/* Контейнер кнопок */
-.button-container {
+/* Карточка кнопок */
+.card {
   background-color: white;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  padding: 40px 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 /* Кнопки */
 .buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
-  justify-items: center;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: #d0e7ff;
-  color: #000;
+  background-color: rgba(135, 206, 250, 0.8); /* светло-синий */
+  color: black;
   border: 1px solid gray;
   border-radius: 10px;
   padding: 15px 25px;
@@ -69,50 +71,49 @@ body {
   cursor: pointer;
   transition: box-shadow 0.3s ease;
   text-decoration: none;
-  text-align: center;
-  width: 100%;
-  max-width: 300px;
 }
 
 .btn:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Всплывающее описание */
-.dropdown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Подсказка */
+.tooltip-container {
   position: relative;
+  display: inline-block;
   width: 100%;
   max-width: 300px;
 }
 
-.dropdown-content {
+.tooltip-text {
+  visibility: hidden;
+  width: 280px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  border-radius: 8px;
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 13px;
+  white-space: normal;
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 0 15px;
-  border-radius: 10px;
-  font-size: 14px;
-  white-space: nowrap;
-  margin-top: 10px;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
-  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.dropdown:hover .dropdown-content {
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
   opacity: 1;
-  max-height: 300px;
-  padding: 15px;
-  pointer-events: auto;
 }
 
 /* Подвал */
 footer {
   text-align: center;
   color: white;
-  margin: 40px 0 20px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
 }
