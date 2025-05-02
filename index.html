@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой Первый Сайт</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>РњРѕР№ РЎР°Р№С‚</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f2f2f2;
       text-align: center;
-      margin-top: 100px;
+      padding: 40px;
     }
-    h1 {
-      color: #333;
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #005fa3;
+    }
+
+    img {
+      margin-top: 30px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <h1>Добро пожаловать на мой первый сайт!</h1>
-  <p>Создано с помощью GitHub Pages.</p>
+  <h1>Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РЅР° РјРѕР№ СЃР°Р№С‚!</h1>
+  <nav>
+    <a href="#">Р“Р»Р°РІРЅР°СЏ</a>
+    <a href="#">РћР±Рѕ РјРЅРµ</a>
+    <a href="#">РљРѕРЅС‚Р°РєС‚С‹</a>
+  </nav>
+
+  <button class="button" onclick="alert('РЎРїР°СЃРёР±Рѕ Р·Р° РЅР°Р¶Р°С‚РёРµ!')">РќР°Р¶РјРё РјРµРЅСЏ</button>
+
+  <img src="https://placekitten.com/400/300" alt="РњРёР»С‹Р№ РєРѕС‚РёРє" />
 </body>
 </html>
