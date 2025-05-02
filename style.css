@@ -105,7 +105,12 @@ body {
 
 /* Подвал */
 footer {
-  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
-  margin-top: 40px;
+  font-size: 14px;
+  z-index: 10;
 }
+
