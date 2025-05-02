@@ -22,17 +22,19 @@
         Для кандидатов на службу
       </a>
 
-      <div class="btn dropdown">
-        <i class="fas fa-university icon"></i>
-        Для кандидатов в ВУЗ
-        <div class="dropdown-content">
-          Перечень вузов:<br>
-          Пограничная Академия КНБ РК (г. Алматы)<br>
-          Военный институт СВ РК (АВОКУ) (г. Алматы)<br>
-          Институт Береговой охраны ФСБ РФ (г. Анапа)<br>
-          Академия ФСБ РФ (г. Москва)<br>
-          Военно-воздушная академия (г. Воронеж)
-        </div>
+      <div class="dropdown">
+        <a class="btn">
+          <i class="fas fa-university icon"></i>
+          Для кандидатов в ВУЗ
+          <div class="dropdown-content">
+            Перечень вузов:
+            <br>Пограничная Академия КНБ РК (г. Алматы)
+            <br>Военный институт СВ РК (АВОКУ) (г. Алматы)
+            <br>Институт Береговой охраны ФСБ РФ (г. Анапа)
+            <br>Академия ФСБ РФ (г. Москва)
+            <br>Военно-воздушная академия (г. Воронеж)
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -40,20 +42,5 @@
   <footer>
     &copy; 2025 Пограничная служба КНБ РК
   </footer>
-
-  <script>
-    document.querySelectorAll('.dropdown').forEach(dropdown => {
-      dropdown.addEventListener('mouseenter', () => {
-        const content = dropdown.querySelector('.dropdown-content');
-        content.style.opacity = '1';
-        content.style.maxHeight = '200px';
-      });
-      dropdown.addEventListener('mouseleave', () => {
-        const content = dropdown.querySelector('.dropdown-content');
-        content.style.opacity = '0';
-        content.style.maxHeight = '0';
-      });
-    });
-  </script>
 </body>
 </html>
