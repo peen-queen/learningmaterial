@@ -21,15 +21,40 @@
         <i class="fas fa-user icon"></i>
         Для кандидатов на службу
       </a>
-      <a class="btn" href="#">
-        <i class="fas fa-university icon"></i>
-        Для кандидатов в ВУЗ
-      </a>
+
+      <div class="btn-dropdown" onclick="toggleDropdown(this)">
+        <a class="btn" href="javascript:void(0);">
+          <i class="fas fa-university icon"></i>
+          Для кандидатов в ВУЗ
+        </a>
+        <div class="dropdown-content">
+          <strong>Перечень вузов:</strong><br>
+          Пограничная Академия КНБ РК (г. Алматы)<br>
+          Военный институт СВ РК (АВОКУ) (г. Алматы)<br>
+          Институт Береговой охраны ФСБ РФ (г. Анапа)<br>
+          Академия ФСБ РФ (г. Москва)<br>
+          Военно-воздушная академия (г. Воронеж)
+        </div>
+      </div>
     </div>
   </div>
 
   <footer>
     &copy; 2025 Пограничная служба КНБ РК
   </footer>
+
+  <script>
+    function toggleDropdown(el) {
+      el.classList.toggle("active");
+    }
+
+    document.addEventListener("click", function(e) {
+      document.querySelectorAll(".btn-dropdown").forEach(function(drop) {
+        if (!drop.contains(e.target)) {
+          drop.classList.remove("active");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
