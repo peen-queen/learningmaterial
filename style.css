@@ -3,10 +3,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Anton', sans-serif;
-  position: relative;
   min-height: 100vh;
   overflow-x: hidden;
-background: url("background.jpg") no-repeat center center fixed;
+  background: url("background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -21,23 +20,34 @@ background: url("background.jpg") no-repeat center center fixed;
   z-index: -1;
 }
 
-/* Карточка */
-.card {
-  padding: 40px;
+/* Заголовок */
+.header-box {
+  background-color: white;
+  margin: 30px auto;
+  width: fit-content;
+  padding: 20px 30px;
   text-align: center;
-  color: #fff;
+  border-radius: 10px;
 }
 
-/* Заголовок */
-.header .title {
-  font-size: 20px;
-  color: white;
-  text-shadow: 1px 1px 1px black;
+.title {
+  font-size: 40px; /* Увеличено в два раза */
+  color: black;
+  text-shadow: 1px 1px 1px gray;
+}
+
+/* Карточка */
+.card {
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
 }
 
 /* Кнопки */
 .buttons {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,9 +58,9 @@ background: url("background.jpg") no-repeat center center fixed;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(0, 50, 0, 0.4);
-  color: white;
-  border: 1px solid gray;
+  background-color: #cce4ff; /* Светло-синий */
+  color: black;
+  border: 1px solid #888;
   border-radius: 10px;
   padding: 15px 25px;
   font-size: 16px;
@@ -75,7 +85,7 @@ background: url("background.jpg") no-repeat center center fixed;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 0 15px;
   border-radius: 10px;
