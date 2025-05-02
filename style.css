@@ -51,15 +51,16 @@ h1 {
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #00c6ff;
-  color: #000;
+  padding: 1rem;
+  background-color: rgba(0, 100, 0, 0.6); /* тёмно-зелёный с прозрачностью */
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 0px; /* квадратные углы */
   transition: background 0.3s;
+  border: 2px solid rgba(0, 100, 0, 0.8); /* необязательно, но добавляет четкость */
 }
 
 .btn:hover {
-  background-color: #00aaff;
+  background-color: rgba(0, 100, 0, 0.8);
 }
