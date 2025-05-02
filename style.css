@@ -1,16 +1,14 @@
-/* Фон страницы */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Anton', sans-serif;
+  position: relative;
   min-height: 100vh;
   overflow-x: hidden;
   background: url("background.jpg") no-repeat center center fixed;
   background-size: cover;
-  position: relative;
 }
 
-/* Размытие фона */
 .blur-background::before {
   content: '';
   position: fixed;
@@ -25,36 +23,32 @@ body {
 /* Заголовок */
 .header-box {
   background-color: white;
-  padding: 30px 20px;
-  margin: 30px auto 20px;
-  max-width: 600px;
+  padding: 20px 40px;
+  margin: 30px auto 20px auto;
   text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
 }
 
 .title {
   font-size: 40px;
   color: black;
-  line-height: 1.3;
 }
 
-/* Карточка кнопок */
+/* Карточка и кнопки */
 .card {
   background-color: white;
-  padding: 40px 30px;
-  max-width: 600px;
+  padding: 40px;
   margin: 0 auto;
+  max-width: 500px;
+  border-radius: 10px;
   text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* Кнопки */
 .buttons {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
 }
 
@@ -62,27 +56,25 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(135, 206, 250, 0.8); /* светло-синий */
+  background-color: #cce4ff;
   color: black;
   border: 1px solid gray;
   border-radius: 10px;
   padding: 15px 25px;
   font-size: 16px;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
   text-decoration: none;
+  transition: box-shadow 0.3s ease;
 }
 
 .btn:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Подсказка */
+/* Подсказка справа */
 .tooltip-container {
   position: relative;
   display: inline-block;
-  width: 100%;
-  max-width: 300px;
 }
 
 .tooltip-text {
@@ -96,17 +88,18 @@ body {
   position: absolute;
   left: 105%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(10px);
   z-index: 1;
   font-size: 13px;
   white-space: normal;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .tooltip-container:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
 
 /* Подвал */
@@ -114,6 +107,6 @@ footer {
   text-align: center;
   color: white;
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   width: 100%;
 }
