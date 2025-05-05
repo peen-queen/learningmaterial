@@ -10,27 +10,30 @@
 </head>
 <body>
   <div class="header-box">
-    <h1 class="title">Департамент пограничной службы<br>КНБ РК по<br>Алматинской области</h1>
+    <h1 class="site-title">Департамент пограничной службы<br>КНБ РК по<br>Алматинской области</h1>
   </div>
 
-  <div class="button-panel left">
-    <button class="expand-btn" onclick="toggleContent('left')">Для кандидатов на службу</button>
-    <div id="content-left" class="expand-content">Текст-пустышка для кандидатов на службу</div>
+  <div class="button-block left">
+    <button class="action-btn" onclick="toggleContent('content-left')">Для кандидатов на службу</button>
+    <div id="content-left" class="content-box">
+      <p>• Перечень документов для прохождения специальной проверки</p>
+      <p>• Анкета кандидата для заполнения</p>
+      <p>• Шаблон автобиографии кандидата для заполнения</p>
+      <p><a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?hl=ru" target="_blank">Открыть документы</a></p>
+    </div>
   </div>
 
-  <div class="button-panel right">
-    <button class="expand-btn" onclick="toggleContent('right')">Для кандидатов в ВУЗ</button>
-    <div id="content-right" class="expand-content">Текст-пустышка для кандидатов в ВУЗ</div>
+  <div class="button-block right">
+    <button class="action-btn" onclick="toggleContent('content-right')">Для кандидатов в ВУЗ</button>
+    <div id="content-right" class="content-box">
+      <p>Текст-пустышка</p>
+    </div>
   </div>
-
-  <footer>
-    &copy; 2025 Пограничная служба КНБ РК
-  </footer>
 
   <script>
-    function toggleContent(side) {
-      const content = document.getElementById('content-' + side);
-      content.classList.toggle('active');
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      content.classList.toggle('visible');
     }
   </script>
 </body>
