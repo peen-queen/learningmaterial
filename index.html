@@ -1,46 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Департамент ПС КНБ РК</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="blur-background"></div>
-
-  <div class="header-container">
-    <div class="header">
-      <div class="title">
-        Департамент пограничной службы<br>КНБ РК по<br>Алматинской области
-      </div>
-    </div>
+  <div class="header-box">
+    <h1 class="title">Департамент пограничной службы<br>КНБ РК по<br>Алматинской области</h1>
   </div>
 
-  <div class="card">
-    <div class="buttons">
-   <a class="btn" href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=sharing" target="_blank">
-  <i class="fas fa-user icon"></i>
-  Для кандидатов на службу
-</a>
-
-
-     <div class="dropdown">
-  <a class="btn" href="https://drive.google.com/drive/folders/1OEyB34Vcd6XJBrVZ1bFbiGjLIyy-LQ4E?usp=sharing" target="_blank">
-    <i class="fas fa-university icon"></i>
-    Для кандидатов в ВУЗ
-  </a>
-  <div class="tooltip">
-    Необходимый перечень документов, список ВУЗов для поступления
+  <div class="button-panel left">
+    <button class="expand-btn" onclick="toggleContent('left')">Для кандидатов на службу</button>
+    <div id="content-left" class="expand-content">Текст-пустышка для кандидатов на службу</div>
   </div>
-</div>
-    </div>
+
+  <div class="button-panel right">
+    <button class="expand-btn" onclick="toggleContent('right')">Для кандидатов в ВУЗ</button>
+    <div id="content-right" class="expand-content">Текст-пустышка для кандидатов в ВУЗ</div>
   </div>
 
   <footer>
     &copy; 2025 Пограничная служба КНБ РК
   </footer>
+
+  <script>
+    function toggleContent(side) {
+      const content = document.getElementById('content-' + side);
+      content.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
