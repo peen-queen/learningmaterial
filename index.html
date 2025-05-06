@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,33 +6,51 @@
   <title>Департамент ПС КНБ РК</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="header-box">
-    <h1 class="site-title">Департамент пограничной службы<br>КНБ РК по<br>Алматинской области</h1>
-  </div>
-
-  <div class="button-block left">
-    <button class="action-btn" onclick="toggleContent('content-left')">Для кандидатов на службу</button>
-    <div id="content-left" class="content-box">
-      <p>• Перечень документов для прохождения специальной проверки</p>
-      <p>• Анкета кандидата для заполнения</p>
-      <p>• Шаблон автобиографии кандидата для заполнения</p>
-      <p><a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?hl=ru" target="_blank">Открыть документы</a></p>
+    <div class="title">
+      Департамент пограничной службы<br>КНБ РК по<br>Алматинской области
     </div>
   </div>
 
-  <div class="button-block right">
-    <button class="action-btn" onclick="toggleContent('content-right')">Для кандидатов в ВУЗ</button>
-    <div id="content-right" class="content-box">
-      <p>Текст-пустышка</p>
+  <div class="top-buttons">
+    <div class="dropdown left">
+      <button class="btn" onclick="toggleDropdown('serviceContent')">Для кандидатов на службу</button>
+      <div class="dropdown-content" id="serviceContent">
+        <p>• Перечень документов для прохождения специальной проверки</p>
+        <p>• Анкета кандидата для заполнения</p>
+        <p>• Шаблон автобиографии кандидата для заполнения</p>
+        <p>
+          <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=sharing" target="_blank" style="color: #00f0ff;">
+            Перейти к документам
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="dropdown right">
+      <button class="btn" onclick="toggleDropdown('universityContent')">Для кандидатов в ВУЗ</button>
+      <div class="dropdown-content" id="universityContent">
+        <p>Здесь будет информация о поступлении в ВУЗ. Содержимое пока заполняется.</p>
+      </div>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 Пограничная служба КНБ РК
+  </footer>
 
   <script>
-    function toggleContent(id) {
+    function toggleDropdown(id) {
+      const dropdowns = document.querySelectorAll('.dropdown-content');
+      dropdowns.forEach((el) => {
+        if (el.id !== id) el.classList.remove('show');
+      });
+
       const content = document.getElementById(id);
-      content.classList.toggle('visible');
+      content.classList.toggle('show');
     }
   </script>
 </body>
