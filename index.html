@@ -6,6 +6,17 @@
   <title>Департамент ПС КНБ РК</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdownButtons = document.querySelectorAll('.dropdown .custom-btn');
+      dropdownButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const dropdown = button.nextElementSibling;
+          dropdown.classList.toggle('active');
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="header-container">
@@ -15,23 +26,27 @@
   </div>
 
   <div class="button-row">
-    <div class="dropdown left">
-      <button class="custom-btn" onclick="toggleContent('content1')">Для кандидатов на службу</button>
-      <div class="dropdown-content" id="content1">
+    <div class="dropdown">
+      <button class="custom-btn">Для кандидатов на службу</button>
+      <div class="dropdown-content">
         <ul>
           <li>• Перечень документов для прохождения специальной проверки</li>
           <li>• Анкета кандидата для заполнения</li>
           <li>• Шаблон автобиографии кандидата для заполнения</li>
         </ul>
-        <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=sharing" target="_blank">Ссылка на документы</a>
+        <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=sharing" target="_blank">
+          Перейти к документам
+        </a>
       </div>
     </div>
 
-    <div class="dropdown right">
-      <button class="custom-btn" onclick="toggleContent('content2')">Для кандидатов в ВУЗ</button>
-      <div class="dropdown-content" id="content2">
+    <div class="dropdown">
+      <button class="custom-btn">Для кандидатов в ВУЗ</button>
+      <div class="dropdown-content">
         <p>Необходимый перечень документов, список ВУЗов для поступления</p>
-        <a href="https://drive.google.com/drive/folders/1OEyB34Vcd6XJBrVZ1bFbiGjLIyy-LQ4E?usp=sharing" target="_blank">Ссылка на документы</a>
+        <a href="https://drive.google.com/drive/folders/1OEyB34Vcd6XJBrVZ1bFbiGjLIyy-LQ4E?usp=sharing" target="_blank">
+          Перейти к информации
+        </a>
       </div>
     </div>
   </div>
@@ -39,12 +54,5 @@
   <footer>
     &copy; 2025 Пограничная служба КНБ РК
   </footer>
-
-  <script>
-    function toggleContent(id) {
-      const content = document.getElementById(id);
-      content.classList.toggle('active');
-    }
-  </script>
 </body>
 </html>
