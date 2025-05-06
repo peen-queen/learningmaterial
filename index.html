@@ -6,34 +6,32 @@
   <title>Департамент ПС КНБ РК</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="header-box">
-    <div class="title">
+  <div class="header-container">
+    <div class="header-title">
       Департамент пограничной службы<br>КНБ РК по<br>Алматинской области
     </div>
   </div>
 
-  <div class="top-buttons">
+  <div class="button-row">
     <div class="dropdown left">
-      <button class="btn" onclick="toggleDropdown('serviceContent')">Для кандидатов на службу</button>
-      <div class="dropdown-content" id="serviceContent">
-        <p>• Перечень документов для прохождения специальной проверки</p>
-        <p>• Анкета кандидата для заполнения</p>
-        <p>• Шаблон автобиографии кандидата для заполнения</p>
-        <p>
-          <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=sharing" target="_blank" style="color: #00f0ff;">
-            Перейти к документам
-          </a>
-        </p>
+      <button class="custom-btn" onclick="toggleContent('content1')">Для кандидатов на службу</button>
+      <div class="dropdown-content" id="content1">
+        <ul>
+          <li>• Перечень документов для прохождения специальной проверки</li>
+          <li>• Анкета кандидата для заполнения</li>
+          <li>• Шаблон автобиографии кандидата для заполнения</li>
+        </ul>
+        <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=sharing" target="_blank">Ссылка на документы</a>
       </div>
     </div>
 
     <div class="dropdown right">
-      <button class="btn" onclick="toggleDropdown('universityContent')">Для кандидатов в ВУЗ</button>
-      <div class="dropdown-content" id="universityContent">
-        <p>Здесь будет информация о поступлении в ВУЗ. Содержимое пока заполняется.</p>
+      <button class="custom-btn" onclick="toggleContent('content2')">Для кандидатов в ВУЗ</button>
+      <div class="dropdown-content" id="content2">
+        <p>Необходимый перечень документов, список ВУЗов для поступления</p>
+        <a href="https://drive.google.com/drive/folders/1OEyB34Vcd6XJBrVZ1bFbiGjLIyy-LQ4E?usp=sharing" target="_blank">Ссылка на документы</a>
       </div>
     </div>
   </div>
@@ -43,14 +41,9 @@
   </footer>
 
   <script>
-    function toggleDropdown(id) {
-      const dropdowns = document.querySelectorAll('.dropdown-content');
-      dropdowns.forEach((el) => {
-        if (el.id !== id) el.classList.remove('show');
-      });
-
+    function toggleContent(id) {
       const content = document.getElementById(id);
-      content.classList.toggle('show');
+      content.classList.toggle('active');
     }
   </script>
 </body>
