@@ -1,39 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Департамент ПС КНБ РК</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Карточки</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="card" id="card1">
+        <div class="card left">
             <div class="card-inner">
                 <div class="card-front">Для кандидатов на службу</div>
                 <div class="card-back">
-                    ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ<br>
-                    АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ<br>
-                    АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ
+                    <p>ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ</p>
+                    <p>АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ</p>
+                    <p>АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ</p>
                 </div>
             </div>
         </div>
-        <div class="card" id="card2">
+        <div class="card right">
             <div class="card-inner">
                 <div class="card-front">Для кандидатов в ВУЗ</div>
                 <div class="card-back">
-                    ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ<br>
-                    АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ<br>
-                    АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ
+                    <p>ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ</p>
+                    <p>АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ</p>
+                    <p>АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ</p>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('click', () => {
-                card.classList.toggle('flipped');
-            });
-        });
-    </script>
 </body>
 </html>

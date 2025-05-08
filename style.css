@@ -1,36 +1,38 @@
+
 body {
     margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: url('background.png') no-repeat center top;
-    background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif;
 }
 
 .container {
+    width: 100%;
     display: flex;
-    gap: 50px;
+    justify-content: space-between;
+    padding: 50px;
+    box-sizing: border-box;
 }
 
 .card {
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
     perspective: 1000px;
-    cursor: pointer;
 }
 
 .card-inner {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 
-.card.flipped .card-inner {
+.card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
@@ -38,16 +40,17 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
     background: white;
     color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    border: none;
     font-weight: bold;
-    padding: 20px;
-    box-sizing: border-box;
+    font-size: 18px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - 50px) 100%, 0 calc(100% - 50px));
 }
 
 .card-back {
