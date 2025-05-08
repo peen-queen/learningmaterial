@@ -6,58 +6,49 @@
   <title>Департамент ПС КНБ РК</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      const dropdownButtons = document.querySelectorAll('.dropdown .custom-btn');
-      dropdownButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const dropdown = button.nextElementSibling;
-          dropdown.classList.toggle('active');
-        });
-      });
-    });
-  </script>
 </head>
 <body>
-  <div class="header-container">
-    <div class="header-title">
-      Департамент пограничной службы<br>КНБ РК по<br>Алматинской области
-    </div>
+  <div class="blur-background"></div>
+
+  <div class="header-box">
+    <div class="title">Департамент пограничной службы КНБ РК по Алматинской области</div>
   </div>
 
-  <div class="button-row">
-    <div class="dropdown">
-      <button class="custom-btn">Для кандидатов на службу</button>
-      <div class="dropdown-content">
-        <ul>
-          <li>• Перечень документов для прохождения специальной проверки</li>
-          <li>• Анкета кандидата для заполнения</li>
-          <li>• Шаблон автобиографии кандидата для заполнения</li>
-        </ul>
-        <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=sharing" target="_blank">
-          Перейти к документам
-        </a>
+  <div class="button-panel">
+    <div class="button-container left">
+      <button class="btn" id="toggleButton1">Для кандидатов на службу</button>
+      <div class="dropdown" id="dropdown1">
+        <p>• Перечень документов для прохождения специальной проверки<br>
+           • Анкета кандидата для заполнения<br>
+           • Шаблон автобиографии кандидата для заполнения<br>
+           <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=sharing" target="_blank">Перейти к документам</a>
+        </p>
       </div>
     </div>
 
-    <div class="dropdown">
-      <button class="custom-btn">Для кандидатов в ВУЗ</button>
-      <div class="dropdown-content">
-        <ul>
-          <li>• Перечень документов для поступления в ВУЗ</li>
-          <li>• Перечень государственных и иностранных ВУЗов</li>
-          <li>• Анкета для заполнения кандидатом</li>
-          <li>• Шаблон автобиографии для заполнения кандидатом</li>
-        </ul>
-        <a href="https://drive.google.com/drive/folders/1OEyB34Vcd6XJBrVZ1bFbiGjLIyy-LQ4E?usp=sharing" target="_blank">
-          Перейти к информации
-        </a>
+    <div class="button-container right">
+      <button class="btn" id="toggleButton2">Для кандидатов в ВУЗ</button>
+      <div class="dropdown" id="dropdown2">
+        <p>• Перечень документов для поступления в ВУЗ<br>
+           • Перечень государственных и иностранных ВУЗов<br>
+           • Анкета для заполнения кандидатом<br>
+           • Шаблон автобиографии для заполнения кандидатом<br>
+           <a href="https://drive.google.com/drive/folders/1OEyB34Vcd6XJBrVZ1bFbiGjLIyy-LQ4E?usp=sharing" target="_blank">Перейти к документам</a>
+        </p>
       </div>
     </div>
   </div>
 
-  <footer>
-    &copy; 2025 Пограничная служба КНБ РК
-  </footer>
+  <footer>© 2025 Пограничная служба КНБ РК</footer>
+
+  <script>
+    document.getElementById('toggleButton1').addEventListener('click', function () {
+      document.getElementById('dropdown1').classList.toggle('active');
+    });
+
+    document.getElementById('toggleButton2').addEventListener('click', function () {
+      document.getElementById('dropdown2').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
