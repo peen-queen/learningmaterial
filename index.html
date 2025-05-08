@@ -1,60 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Департамент ПС КНБ РК</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Департамент ПС КНБ РК</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="content">
-    <div class="button left">
-      <button id="btn-service" class="styled-btn">Для кандидатов на службу</button>
-      <div class="dropdown" id="dropdown-service">
-        <p>• Перечень документов для прохождения специальной проверки<br>
-        • Анкета кандидата для заполнения<br>
-        • Шаблон автобиографии кандидата для заполнения<br>
-        <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=sharing" target="_blank">Перейти по ссылке</a></p>
-      </div>
+    <div class="container">
+        <div class="card" id="card1">
+            <div class="card-inner">
+                <div class="card-front">Для кандидатов на службу</div>
+                <div class="card-back">
+                    ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ<br>
+                    АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ<br>
+                    АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ
+                </div>
+            </div>
+        </div>
+        <div class="card" id="card2">
+            <div class="card-inner">
+                <div class="card-front">Для кандидатов в ВУЗ</div>
+                <div class="card-back">
+                    ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ<br>
+                    АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ<br>
+                    АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="button right">
-      <button id="btn-university" class="styled-btn">Для кандидатов в ВУЗ</button>
-      <div class="dropdown" id="dropdown-university">
-        <p>• Перечень документов для поступления в ВУЗ<br>
-        • Перечень государственных и иностранных ВУЗов<br>
-        • Анкета для заполнения кандидатом<br>
-        • Шаблон автобиографии для заполнения кандидатом<br>
-        <a href="https://drive.google.com/drive/folders/1OEyB34Vcd6XJBrVZ1bFbiGjLIyy-LQ4E?usp=sharing" target="_blank">Перейти по ссылке</a></p>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 Пограничная служба КНБ РК
-  </footer>
-
-  <script>
-    document.getElementById('btn-service').addEventListener('click', function () {
-      const menu = document.getElementById('dropdown-service');
-      menu.classList.toggle('show');
-      document.getElementById('dropdown-university').classList.remove('show');
-    });
-
-    document.getElementById('btn-university').addEventListener('click', function () {
-      const menu = document.getElementById('dropdown-university');
-      menu.classList.toggle('show');
-      document.getElementById('dropdown-service').classList.remove('show');
-    });
-
-    window.addEventListener('click', function(e) {
-      if (!e.target.matches('.styled-btn')) {
-        document.getElementById('dropdown-service').classList.remove('show');
-        document.getElementById('dropdown-university').classList.remove('show');
-      }
-    });
-  </script>
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+    </script>
 </body>
 </html>
