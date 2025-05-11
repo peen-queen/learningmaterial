@@ -2,43 +2,34 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Карточки кандидатов</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Департамент ПС КНБ РК</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="card-face front">
-                    ДЛЯ КАНДИДАТОВ НА СЛУЖБУ
-                </div>
-                <div class="card-face back">
-                    <div>
-                        ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ<br>
-                        АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ<br>
-                        АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ<br>
-                        <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=drive_link" target="_blank">Перейти к документам</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="card-face front">
-                    ДЛЯ КАНДИДАТОВ В ВУЗ
-                </div>
-                <div class="card-face back">
-                    <div>
-                        ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ<br>
-                        АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ<br>
-                        АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ<br>
-                        ПЕРЕЧЕНЬ ВУЗОВ ДЛЯ ПОСТУПЛЕНИЯ<br>
-                        <a href="https://drive.google.com/drive/folders/1OEyB34Vcd6XJBrVZ1bFbiGjLIyy-LQ4E?usp=drive_link" target="_blank">Перейти к документам</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="card-container">
+    <div class="card" id="card-left">
+      <div class="card-front">Для кандидатов на службу</div>
+      <div class="card-back">
+        <p>ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ<br>АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ<br>АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ</p>
+        <a href="https://drive.google.com/drive/folders/123w3dht0mD1EULn1X6aCmNLl-QImnxYH?usp=drive_link" target="_blank">Перейти к документам</a>
+      </div>
     </div>
+    <div class="card" id="card-right">
+      <div class="card-front">Для кандидатов в ВУЗ</div>
+      <div class="card-back">
+        <p>ПЕРЕЧЕНЬ НЕОБХОДИМЫХ ДОКУМЕНТОВ<br>АНКЕТА ДЛЯ ЗАПОЛНЕНИЯ<br>АВТОБИОГРАФИЯ ДЛЯ ЗАПОЛНЕНИЯ</p>
+        <a href="https://drive.google.com/drive/folders/1OEyB34Vcd6XJBrVZ1bFbiGjLIyy-LQ4E?usp=drive_link" target="_blank">Перейти к документам</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  </script>
 </body>
 </html>
